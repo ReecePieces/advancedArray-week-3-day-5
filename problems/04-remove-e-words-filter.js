@@ -10,11 +10,25 @@ Examples:
 console.log(removeEWords('What time is it everyone?')); // 'What is it'
 console.log(removeEWords('Enter the building')); // 'building'
 
+1. change string into array
+2. iterate through each word to find letter 'e'
+3. remove that word
+4. return words without e
 */
 
 let removeEWords = function(sentence) {
-    // Your code here
+  let newSen = sentence.split(" ");
+  let arr = [];
+  newSen.filter((word) => {
+    if (!word.toLowerCase().includes("e")) {
+      arr.push(word);
+    }
+  })
+  return arr.join(" ");
 };
+
+console.log(removeEWords('What time is it everyone?')); // 'What is it'
+console.log(removeEWords('Enter the building')); // 'building'
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
@@ -22,4 +36,4 @@ try {
   module.exports = removeEWords;
 } catch (e) {
   module.exports = null;
-}
+}

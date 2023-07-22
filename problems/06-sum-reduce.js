@@ -5,16 +5,19 @@ The function should return the total sum of all numbers in the array.
 
 Solve this using Array's `reduce()` method.
 
-Examples:
-
-console.log(sumWithReduce([10, 3, 5, 2])); // 20
-console.log(sumWithReduce([])); // 0
 
 */
 
 let sumWithReduce = function(nums) {
-  // Your code here
+  let count = 0;
+  nums.reduce((num) => {
+    count += num
+  })
+  return count / nums.length;
 };
+
+console.log(sumWithReduce([10, 3, 5, 2])); // 20
+console.log(sumWithReduce([])); // 0
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
