@@ -10,10 +10,7 @@ Solve this using Array's `reduce()` method.
 
 let sumWithReduce = function(nums) {
   let count = 0;
-  nums.reduce((num) => {
-    count += num
-  })
-  return count / nums.length;
+  return nums.reduce((acc, num) => acc + num, 0)
 };
 
 console.log(sumWithReduce([10, 3, 5, 2])); // 20
